@@ -8,7 +8,7 @@ WORKDIR /root/
 COPY --from=ui-build /usr/src/app/frontend/build ./frontend/build
 COPY backend/package*.json ./backend/
 RUN cd backend && npm install
-COPY backend/index.js ./backend/
+COPY backend/ ./backend/
 
 EXPOSE 3080
 
